@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
 
 export const dynamic = "force-dynamic"; // update the page on every request
@@ -19,14 +20,19 @@ export default async function HomePage() {
 
   return (
     <main>
-      <div className="flex flex-wrap gap-4">
-        {images.map((image) => (
-          <div key={image.id} className="flex w-48 flex-col">
-            <img src={image.url} alt={`Image ${image.id}`} />
-            <div className="text-sm">{image.name}</div>
-          </div>
-        ))}
-      </div>
+      <SignedOut>
+        <div className="h-full w-full text-2xl">Sign in to see images</div>
+      </SignedOut>
+      <SignedIn>
+        <div className="flex flex-wrap gap-4">
+          {images.map((image) => (
+            <div key={image.id} className="flex w-48 flex-col">
+              <img src={image.url} alt={`Image ${image.id}`} />
+              <div className="text-sm">{image.name}</div>
+            </div>
+          ))}
+        </div>
+      </SignedIn>
     </main>
   );
 }

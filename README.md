@@ -7,7 +7,8 @@
 - [x] Tidy up build process
 - [x] Actually set up a db (vercel pg)
 - [x] Attach db to UI and build the schema
-- [ ] Add authentication (clerk)
+- [x] Add authentication (clerk)
+- [] "taint" (server-only)
 - [ ] Add image upload
 - [ ] Error management (sentry)
 - [ ] Routing/image page (parallel route)
