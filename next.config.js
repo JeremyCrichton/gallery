@@ -7,10 +7,10 @@ await import("./src/env.js");
 /** @type {import("next").NextConfig} */
 const config = {
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // We can check this in github actions and not block our build
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // We can check this in github actions and not block our build
   },
 };
 
