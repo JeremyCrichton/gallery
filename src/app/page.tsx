@@ -10,28 +10,34 @@ const mockUrls = [
   "https://utfs.io/f/ee0db300-6ad4-4359-87af-282e7222e9c2-1xedtf.png",
 ];
 
-const mockImages = mockUrls.map((url, index) => ({ id: index + 1, url }));
-
-export default async function HomePage() {
+async function Images() {
   const images = await db.query.images.findMany({
     orderBy: (model, { desc }) => desc(model.id),
   });
   console.log("images", images); // see this in the terminal - it's running only on the server
 
   return (
+    <div className="flex flex-wrap gap-4">
+      {images.map((image) => (
+        <div key={image.id} className="flex w-48 flex-col">
+          <img src={image.url} alt={`Image ${image.id}`} />
+          <div className="text-sm">{image.name}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default async function HomePage() {
+  return (
     <main>
       <SignedOut>
-        <div className="h-full w-full text-2xl">Sign in to see images</div>
+        <div className="h-full w-full text-center text-2xl">
+          Please sign in above to see images 👀
+        </div>
       </SignedOut>
       <SignedIn>
-        <div className="flex flex-wrap gap-4">
-          {images.map((image) => (
-            <div key={image.id} className="flex w-48 flex-col">
-              <img src={image.url} alt={`Image ${image.id}`} />
-              <div className="text-sm">{image.name}</div>
-            </div>
-          ))}
-        </div>
+        <Images />
       </SignedIn>
     </main>
   );
