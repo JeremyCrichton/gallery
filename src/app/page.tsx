@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
+import { getMyImages } from "~/server/queries";
 
 export const dynamic = "force-dynamic"; // update the page on every request
 
@@ -11,10 +12,7 @@ const mockUrls = [
 ];
 
 async function Images() {
-  const images = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
-  console.log("images", images); // see this in the terminal - it's running only on the server
+  const images = await getMyImages();
 
   return (
     <div className="flex flex-wrap gap-4">
