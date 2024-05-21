@@ -8,10 +8,10 @@
 - [x] Actually set up a db (vercel pg)
 - [x] Attach db to UI and build the schema
 - [x] Add authentication (clerk)
-- [ ] "taint" (server-only)
-- [ ] use Next/Image component
-- [ ] Add image upload
-- [ ] Error management (sentry)
+- [x] Add image upload
+- [x] "taint" (server-only)
+- [x] use Next/Image component
+- [x] Error management (sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (server actions)
 - [ ] Anaytics (posthog)
