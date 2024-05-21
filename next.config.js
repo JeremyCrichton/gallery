@@ -1,3 +1,5 @@
+import { hostname } from "os";
+
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
  * for Docker builds.
@@ -11,6 +13,9 @@ const config = {
   },
   eslint: {
     ignoreDuringBuilds: true, // We can check this in github actions and not block our build
+  },
+  images: {
+    remotePatterns: [{ hostname: "utfs.io" }],
   },
 };
 
