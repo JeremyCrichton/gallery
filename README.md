@@ -11,6 +11,8 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
   - pnpm dlx shadcn-ui@latest add sonner
   - Default, slate, yes
   - Force dark mode by adding class `dark` to body tag
+- 2:19: Add SVG spinner
+  - https://github.com/n3r4zzurr0/svg-spinners
 
 ## TODO
 
