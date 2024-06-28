@@ -20,7 +20,7 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 - [x] "taint" (server-only)
 - [x] use Next/Image component
 - [x] Error management (sentry)
-- [ ] Routing/image page (parallel route)
+- [x] Routing/image page (parallel route)
 - [ ] Delete button (server actions)
 - [ ] Anaytics (posthog)
 - [ ] Rate limiting (upstash)

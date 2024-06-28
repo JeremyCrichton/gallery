@@ -3,13 +3,16 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { UploadButton } from "../utils/uploadthing";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function TopNav() {
   const router = useRouter();
 
   return (
     <nav className="flex w-full items-center justify-between border-b p-4 text-xl font-semibold">
-      <h1 className="text-2xl font-bold">Gallery</h1>
+      <Link href="/">
+        <h1 className="text-2xl font-bold">Gallery</h1>
+      </Link>
       <div>
         <SignedOut>
           <SignInButton />
