@@ -6,7 +6,11 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 
 ## Steps
 
--
+- 2:10: Set up shadcn/ui toaster
+  - pnpm dlx shadcn-ui@latest init
+  - pnpm dlx shadcn-ui@latest add sonner
+  - Default, slate, yes
+  - Force dark mode by adding class `dark` to body tag
 
 ## TODO
 
@@ -21,6 +25,8 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 - [x] use Next/Image component
 - [x] Error management (sentry)
 - [x] Routing/image page (parallel route)
+- [x] Update upload button
+- [x] Add Shadui with toast
 - [ ] Delete button (server actions)
 - [ ] Anaytics (posthog)
 - [ ] Rate limiting (upstash)
