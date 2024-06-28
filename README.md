@@ -32,6 +32,10 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 `pnpm run db:studio` Open the drizzle studio
 `pnpm run db:push` Update db to match current schema
 
+## REFERENCES
+
+- icons from heroicons - just copy JSX
+
 ## NOTES
 
 In package.json nextjs dev command, --turbo spins up dev server super fast
