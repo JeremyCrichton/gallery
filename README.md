@@ -1,5 +1,13 @@
 # My Gallery
 
+## Tutorial Video
+
+https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
+
+## Steps
+
+-
+
 ## TODO
 
 - [x] Make it deploy (vercel)
@@ -17,6 +25,7 @@
 - [ ] Anaytics (posthog)
 - [ ] Rate limiting (upstash)
 - [ ] Create a dev db environment
+- [ ] Read Routing: Parallel Routes in Next.js docs
 
 ## USAGE
 

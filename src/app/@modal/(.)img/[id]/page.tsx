@@ -1,6 +1,8 @@
-import Image from "next/image";
-import { getImage } from "~/server/queries";
+// Use of [] in [id] is to indicate to Next.js that the thing between the brackets is a variable that we have access to
+// the (.) escapes the @modal container
+
 import { Modal } from "./modal";
+import FullPageImageView from "~/components/full-image-page";
 
 export default async function PhotoModal({
   params: { id: photoId },
@@ -12,17 +14,9 @@ export default async function PhotoModal({
     throw new Error("Invalid photo ID");
   }
 
-  const image = await getImage(idAsNumber);
-
   return (
     <Modal>
-      <Image
-        src={image.url}
-        alt={`Image ${image.id}`}
-        style={{ objectFit: "contain" }}
-        height={192}
-        width={192}
-      />
+      <FullPageImageView id={idAsNumber} />
     </Modal>
   );
 }
