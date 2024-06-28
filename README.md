@@ -13,6 +13,11 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
   - Force dark mode by adding class `dark` to body tag
 - 2:19: Add SVG spinner
   - https://github.com/n3r4zzurr0/svg-spinners
+- 2:26: Add Posthog for analytics
+  - Open source product analytics
+  - Not just what pages did people go to but which buttons did they press, which user groups are doing which things
+  - Really useful for getting more general info about your user base and being able to identify patterns, conversions, behaviours
+  - AN ALTERNATIVE - plausible.io: Essentially a GA alternative. If you're not having signed-in users, you just want to see what pages people go to
 
 ## TODO
 
@@ -29,8 +34,8 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 - [x] Routing/image page (parallel route)
 - [x] Update upload button
 - [x] Add Shadui with toast
-- [ ] Delete button (server actions)
 - [ ] Anaytics (posthog)
+- [ ] Delete button (server actions)
 - [ ] Rate limiting (upstash)
 - [ ] Create a dev db environment
 - [ ] Read Routing: Parallel Routes in Next.js docs
