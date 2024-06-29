@@ -34,11 +34,12 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 - [x] Routing/image page (parallel route)
 - [x] Update upload button
 - [x] Add Shadui with toast
-- [ ] Anaytics (posthog)
+- [x] Anaytics (posthog)
 - [ ] Delete button (server actions)
 - [ ] Rate limiting (upstash)
 - [ ] Create a dev db environment
 - [ ] Read Routing: Parallel Routes in Next.js docs
+- [ ] Enhance analytics for ad blockers
 
 ## USAGE
 
