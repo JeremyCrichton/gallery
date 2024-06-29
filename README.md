@@ -24,6 +24,9 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
   - add Upstash code to new server/ratelimit.ts file
   - import that fn into api/uploadthing/core.ts and throw an error if we're ratelimited
   - add stuff to onUploadError in upload button (toast, analytics)
+- 2:57: Lock down uploads
+  - in Clerk add **private** metadata to a user `{"can-upload": true}`
+  - in uploadthing core.ts, look for this prop and throw an error if !true
 
 ## TODO
 
@@ -58,6 +61,7 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
 
 ## NOTES
 
+Only users that I specify have permission can upload
 In package.json nextjs dev command, --turbo spins up dev server super fast
 Commit process
 `git add -p` A mini review of changes
