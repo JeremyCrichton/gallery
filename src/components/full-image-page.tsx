@@ -34,6 +34,8 @@ export default async function FullPageImageView(props: { id: number }) {
           <form
             action={async () => {
               "use server";
+
+              // NOTE: This fn never touches the client, it only runs on the server
               await deleteImage(idAsNumber);
             }}
           >

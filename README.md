@@ -18,6 +18,12 @@ https://youtu.be/d5x0JCZbAJs?si=Lcl_px3Wk5tmxSag
   - Not just what pages did people go to but which buttons did they press, which user groups are doing which things
   - Really useful for getting more general info about your user base and being able to identify patterns, conversions, behaviours
   - AN ALTERNATIVE - plausible.io: Essentially a GA alternative. If you're not having signed-in users, you just want to see what pages people go to
+- Delete
+- 2:50: Rate limiting with Upstash
+  - `pnpm add @upstash/ratelimit`
+  - add Upstash code to new server/ratelimit.ts file
+  - import that fn into api/uploadthing/core.ts and throw an error if we're ratelimited
+  - add stuff to onUploadError in upload button (toast, analytics)
 
 ## TODO
 
